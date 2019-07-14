@@ -7,8 +7,8 @@ node {
 	   mvn clean package -DskipTests
 	   cd target
 	   cp ../src/main/resources/web.config web.config
-	   cp jb-hello-world-maven-0.1.0.jar app.jar
-	   zip todo.zip app.jar web.config
+       cp hello-world-maven-0.1.0-shaded.jar app.jar
+	   zip -r todo.zip app.jar web.config
 	   '''
 	}
 	stage('deploy') {
