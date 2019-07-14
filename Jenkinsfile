@@ -4,6 +4,7 @@ node {
 	}
 	  stage('build') {
 	   sh '''
+	   apt-get update && apt-get install zip
 	   mvn clean package -DskipTests
 	   cd target
 	   cp ../src/main/resources/web.config web.config
